@@ -7,5 +7,8 @@
     "build": "echo 'No build step required for static site'"
   },
   "author": "Fission Textiles",
-  "license": "MIT"
-} 
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/speed-insights": "^1.2.0"
+  }
+}
