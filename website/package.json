@@ -1,0 +1,11 @@
+{
+  "name": "fission-textiles-website",
+  "version": "1.0.0",
+  "description": "Production-ready static website for Fission Textiles.",
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo 'No build step required for static site'"
+  },
+  "author": "Fission Textiles",
+  "license": "MIT"
+} 

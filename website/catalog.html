@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog - NorthStar Impex</title>
+    <meta name="description" content="Browse NorthStar Impex's comprehensive catalog of premium garments including t-shirts, formal wear, denim, athletic wear, and sustainable collections. Wholesale and custom manufacturing available.">
+    <meta property="og:title" content="Premium Garment Catalog - NorthStar Impex">
+    <meta property="og:description" content="Explore our extensive range of high-quality textile products, designed and manufactured to meet international standards.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="public/images/og-image.jpg">
+    <meta property="og:url" content="https://northstarindustries.com/catalog.html">
+    <link rel="icon" href="public/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/fontawesome.min.css">
+    <!-- Fallback CDN for FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Spacing and layout improvements */
+        section {
+            padding: 80px 0;
+            margin: 0;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .catalog-banner {
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('public/images/factory.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .catalog-content {
+            padding: 80px 0;
+        }
+        
+        .intro-text {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-align: center;
+            line-height: 1.6;
+        }
+        
+        .section-title {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+            padding: 25px;
+            background-color: #f8f8f8;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .filter-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .filter-btn {
+            padding: 10px 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: #000;
+            color: #fff;
+        }
+        
+        .sort-select {
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: white;
+            font-size: 0.9rem;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .product-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .product-img {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-img img {
+            transform: scale(1.05);
+        }
+        
+        .product-tag {
+            position: absolute;
+            top: 15px;
+            left: 0;
+            background-color: #000;
+            color: #fff;
+            padding: 6px 15px;
+            font-size: 0.8rem;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        
+        .product-info {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .product-info h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .product-info p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+        
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .product-category {
+            color: #888;
+            font-size: 0.9rem;
+            padding: 5px 12px;
+            background-color: #f5f5f5;
+            border-radius: 20px;
+        }
+        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin: 50px 0 40px;
+            gap: 10px;
+        }
+        
+        .pagination-btn {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .pagination-btn:hover, .pagination-btn.active {
+            background-color: #000;
+            color: #fff;
+        }
+        
+        .custom-cta {
+            text-align: center;
+            background-color: #f8f8f8;
+            padding: 60px 0;
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+        
+        .custom-cta h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .custom-cta p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn-large {
+            padding: 15px 40px;
+            font-size: 1.1rem;
+        }
+        
+        footer {
+            padding: 60px 0 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            text-align: center;
+        }
+        
+        /* Add modal styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal-content {
+            background-color: #fff;
+            width: 90%;
+            max-width: 1000px;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            max-height: 90vh;
+            animation: modalAppear 0.3s;
+        }
+        
+        @keyframes modalAppear {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #888;
+            transition: color 0.3s ease;
+        }
+        
+        .modal-close:hover {
+            color: #000;
+        }
+        
+        .modal-body {
+            padding: 30px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        @media (min-width: 768px) {
+            .modal-body {
+                flex-direction: row;
+            }
+        }
+        
+        .modal-product-image {
+            flex: 1;
+            max-height: 400px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        
+        .modal-product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .modal-product-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .modal-product-title {
+            margin: 0 0 10px 0;
+            font-size: 1.8rem;
+        }
+        
+        .modal-product-desc {
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .spec-table tr {
+            border-bottom: 1px solid #eee;
+        }
+        
+        .spec-table tr:last-child {
+            border-bottom: none;
+        }
+        
+        .spec-table th, .spec-table td {
+            padding: 12px 10px;
+            text-align: left;
+        }
+        
+        .spec-table th {
+            color: #666;
+            font-weight: 500;
+            width: 40%;
+        }
+        
+        .color-options {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .color-option {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 1px #ddd;
+            transition: transform 0.2s;
+        }
+        
+        .color-option:hover {
+            transform: scale(1.1);
+        }
+        
+        .color-option.active {
+            box-shadow: 0 0 0 2px #000;
+        }
+        
+        .search-box {
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 20px;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 10px 40px 10px 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 0.9rem;
+        }
+        
+        .search-box i {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+        }
+        
+        .filter-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .color-filter {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .color-filter label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .quick-view-btn {
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            padding: 12px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            transition: bottom 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .product-img:hover .quick-view-btn {
+            bottom: 0;
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+            
+            .filter-group, .sort-select {
+                width: 100%;
+            }
+            
+            .filter-group {
+                margin-bottom: 20px;
+            }
+            
+            .product-grid {
+                gap: 30px;
+            }
+            
+            .search-box {
+                max-width: 100%;
+            }
+            
+            .color-filter {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">NorthStar Impex</a>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="our-story.html">Our Story</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="catalog.html">Catalog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index.html#quotes">Get Quote</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Catalog Content -->
+    <section class="catalog-content">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Products</h2>
+            </div>
+            
+            <p class="intro-text">Discover NorthStar Impex's comprehensive range of premium quality garments and textile products. From everyday essentials to specialized performance wear, all our products are crafted with superior materials and exceptional attention to detail. With our production capacity of 2,000 pieces per day, we efficiently meet bulk requirements for retailers, brands, and wholesalers. Contact us for custom manufacturing solutions or to request a competitive quote for your garment needs.</p>
+            
+            <div class="filter-controls">
+                <div class="search-box">
+                    <input type="text" id="product-search" placeholder="Search products...">
+                    <i class="fas fa-search"></i>
+                </div>
+                
+                <div class="color-filter">
+                    <label>Filter by color:</label>
+                    <div class="color-option" style="background-color: #000;" data-color="black"></div>
+                    <div class="color-option" style="background-color: #fff;" data-color="white"></div>
+                    <div class="color-option" style="background-color: #0057b8;" data-color="blue"></div>
+                    <div class="color-option" style="background-color: #d62828;" data-color="red"></div>
+                    <div class="color-option" style="background-color: #6a994e;" data-color="green"></div>
+                </div>
+                
+                <select class="sort-select" id="sort-products">
+                    <option value="featured">Sort By: Featured</option>
+                    <option value="newest">Sort By: Newest</option>
+                    <option value="popular">Sort By: Popular</option>
+                    <option value="price-low">Sort By: Price (Low to High)</option>
+                    <option value="price-high">Sort By: Price (High to Low)</option>
+                </select>
+            </div>
+            
+            <div class="filter-bar">
+                <div class="filter-group">
+                    <button class="filter-btn active" data-category="all">All Products</button>
+                    <button class="filter-btn" data-category="t-shirts">T-Shirts</button>
+                    <button class="filter-btn" data-category="formal-wear">Formal Wear</button>
+                    <button class="filter-btn" data-category="denim">Denim</button>
+                    <button class="filter-btn" data-category="athletic-wear">Athletic Wear</button>
+                    <button class="filter-btn" data-category="winter-collection">Winter Collection</button>
+                    <button class="filter-btn" data-category="summer-essentials">Summer Essentials</button>
+                </div>
+            </div>
+            
+            <div class="product-grid" id="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="t-shirts" data-colors="white,black,blue" data-popular="1">
+                    <div class="product-img">
+                        <img src="public/images/White-tshirt.png" alt="Premium Cotton T-shirts">
+                        <span class="product-tag">Bestseller</span>
+                        <div class="quick-view-btn" data-product="product1">Quick View</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Cotton T-shirts</h3>
+                        <p>100% organic cotton, breathable fabric, multiple colors available. Perfect for everyday wear or custom branding.</p>
+                        <div class="product-meta">
+                            <span class="product-category">T-Shirts</span>
+                        </div>
+                        <a href="index.html#quotes" class="btn">Get Quote</a>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card" data-category="formal-wear" data-colors="white,blue" data-popular="2">
+                    <div class="product-img">
+                        <img src="public/images/formal.jpg" alt="Formal Shirts">
+                        <div class="quick-view-btn" data-product="product2">Quick View</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Formal Shirts</h3>
+                        <p>Business wear collection, wrinkle-resistant fabric, custom sizing available. Ideal for corporate uniforms and business attire.</p>
+                        <div class="product-meta">
+                            <span class="product-category">Formal Wear</span>
+                        </div>
+                        <a href="index.html#quotes" class="btn">Get Quote</a>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card" data-category="denim" data-colors="blue" data-popular="3">
+                    <div class="product-img">
+                        <img src="public/images/denim.jpg" alt="Denim Collection">
+                        <span class="product-tag">Sustainable</span>
+                        <div class="quick-view-btn" data-product="product3">Quick View</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Denim Collection</h3>
+                        <p>Sustainable denim production, various washes and styles available. Durable construction with modern fits and finishes.</p>
+                        <div class="product-meta">
+                            <span class="product-category">Denim</span>
+                        </div>
+                        <a href="index.html#quotes" class="btn">Get Quote</a>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card" data-category="athletic-wear" data-colors="black,red,blue" data-popular="5">
+                    <div class="product-img">
+                        <img src="public/images/athletic.jpg" alt="Athletic Wear">
+                        <div class="quick-view-btn" data-product="product4">Quick View</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Athletic Wear</h3>
+                        <p>Moisture-wicking fabrics, ergonomic design, performance enhancing. Engineered for comfort and movement during physical activities.</p>
+                        <div class="product-meta">
+                            <span class="product-category">Athletic Wear</span>
+                        </div>
+                        <a href="index.html#quotes" class="btn">Get Quote</a>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="product-card" data-category="winter-collection" data-colors="black,blue" data-popular="4">
+                    <div class="product-img">
+                        <img src="public/images/winter.jpg" alt="Winter Collection">
+                        <div class="quick-view-btn" data-product="product5">Quick View</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Winter Collection</h3>
+                        <p>Thermal insulation, water-resistant outer layers, fashionable designs. Provides warmth without compromising on style.</p>
+                        <div class="product-meta">
+                            <span class="product-category">Winter Collection</span>
+                        </div>
+                        <a href="index.html#quotes" class="btn">Get Quote</a>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="product-card" data-category="summer-essentials" data-colors="white,green" data-popular="8">
+                    <div class="product-img">
+                        <img src="public/images/summer.jpg" alt="Summer Essentials">
+                        <div class="quick-view-btn" data-product="product6">Quick View</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Summer Essentials</h3>
+                        <p>Lightweight fabrics, UV protection, quick-dry technology. Perfect for hot weather and outdoor activities.</p>
+                        <div class="product-meta">
+                            <span class="product-category">Summer Essentials</span>
+                        </div>
+                        <a href="index.html#quotes" class="btn">Get Quote</a>
+                    </div>
+                </div>
+                
+                <!-- Product 7 -->
+                <div class="product-card" data-category="t-shirts" data-colors="white,blue,red,green" data-popular="6">
+                    <div class="product-img">
+                        <img src="public/images/polo.jpg" alt="Premium Polo Shirts">
+                        <div class="quick-view-btn" data-product="product7">Quick View</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Polo Shirts</h3>
+                        <p>Classic design with modern fit, durable piqué fabric, custom embroidery available. Versatile for casual and semi-formal wear.</p>
+                        <div class="product-meta">
+                            <span class="product-category">T-Shirts</span>
+                        </div>
+                        <a href="index.html#quotes" class="btn">Get Quote</a>
+                    </div>
+                </div>
+                
+                <!-- Product 8 -->
+                <div class="product-card" data-category="specialty-wear" data-colors="blue,black" data-popular="9">
+                    <div class="product-img">
+                        <img src="public/images/workwear.jpg" alt="Industrial Workwear">
+                        <span class="product-tag">Durable</span>
+                        <div class="quick-view-btn" data-product="product8">Quick View</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Industrial Workwear</h3>
+                        <p>Heavy-duty construction, reinforced seams, safety-compliant designs. Built to withstand demanding work environments.</p>
+                        <div class="product-meta">
+                            <span class="product-category">Specialty Wear</span>
+                        </div>
+                        <a href="index.html#quotes" class="btn">Get Quote</a>
+                    </div>
+                </div>
+                
+                <!-- Product 9 -->
+                <div class="product-card" data-category="sustainable" data-colors="white,green" data-popular="7">
+                    <div class="product-img">
+                        <img src="public/images/organic.jpg" alt="Organic Cotton Collection">
+                        <span class="product-tag">Eco-friendly</span>
+                        <div class="quick-view-btn" data-product="product9">Quick View</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Organic Cotton Collection</h3>
+                        <p>GOTS certified organic cotton, eco-friendly dyes, sustainable production. Gentle on the skin and the environment.</p>
+                        <div class="product-meta">
+                            <span class="product-category">Sustainable</span>
+                        </div>
+                        <a href="index.html#quotes" class="btn">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pagination">
+                <div class="pagination-btn active">1</div>
+                <div class="pagination-btn">2</div>
+                <div class="pagination-btn">3</div>
+                <div class="pagination-btn"><i class="fas fa-ellipsis-h"></i></div>
+                <div class="pagination-btn">10</div>
+                <div class="pagination-btn"><i class="fas fa-angle-right"></i></div>
+            </div>
+            
+            <div class="custom-cta">
+                <h3>Need Something Custom?</h3>
+                <p>We offer complete customization services to meet your specific requirements.</p>
+                <a href="services/custom-manufacturing.html" class="btn btn-large">Custom Manufacturing</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Quick View Modal -->
+    <div class="modal-overlay" id="product-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-product-title">Product Title</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-product-image">
+                    <img id="modal-image" src="" alt="Product Image">
+                </div>
+                <div class="modal-product-info">
+                    <p class="modal-product-desc">Product description</p>
+                    
+                    <h4>Colors Available:</h4>
+                    <div class="color-options">
+                        <div class="color-option active" style="background-color: #fff;"></div>
+                        <div class="color-option" style="background-color: #000;"></div>
+                        <div class="color-option" style="background-color: #0057b8;"></div>
+                    </div>
+                    
+                    <h4>Product Specifications:</h4>
+                    <table class="spec-table">
+                        <tr>
+                            <th>Material</th>
+                            <td id="spec-material">Premium Cotton</td>
+                        </tr>
+                        <tr>
+                            <th>Available Sizes</th>
+                            <td id="spec-sizes">S, M, L, XL, XXL</td>
+                        </tr>
+                        <tr>
+                            <th>Features</th>
+                            <td id="spec-features">Breathable, Durable</td>
+                        </tr>
+                        <tr>
+                            <th>Lead Time</th>
+                            <td id="spec-leadtime">3-4 Weeks</td>
+                        </tr>
+                        <tr>
+                            <th>Min. Order Quantity</th>
+                            <td id="spec-moq">500 units</td>
+                        </tr>
+                    </table>
+                    
+                    <a href="index.html#quotes" class="btn">Request Quote</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>NorthStar Impex</h3>
+                    <p>Your emerging partner for high-quality textile manufacturing and exports. Established in 2025 with a production capacity of 2,000 pieces per day, we blend innovation with tradition to create exceptional garments that meet global standards.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="our-story.html">Our Story</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="catalog.html">Catalog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services/custom-manufacturing.html">Custom Manufacturing</a></li>
+                        <li><a href="services/bulk-production.html">Bulk Production</a></li>
+                        <li><a href="services/design-consultation.html">Design Consultation</a></li>
+                        <li><a href="services/quality-testing.html">Quality Testing</a></li>
+                        <li><a href="services/export-services.html">Export Services</a></li>
+                        <li><a href="services/sustainable-production.html">Sustainable Production</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p>Ayube colony st1, Fasilabad, Pakistan</p>
+                    <p>Email: info@northstarindustries.com</p>
+                    <p>Phone: +91 9876543210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NorthStar Impex. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="public/js/main.js"></script>
+    <script>
+        // Product data
+        const productData = {
+            product1: {
+                title: "Premium Cotton T-shirts",
+                description: "Our premium cotton t-shirts are made from 100% GOTS certified organic cotton, providing exceptional comfort and breathability. The fabric is pre-shrunk and reinforced with double-stitching at the seams for enhanced durability. These t-shirts are perfect for everyday wear, custom branding, and promotional merchandise.",
+                image: "public/images/White-tshirt.png",
+                specs: {
+                    material: "100% Organic Cotton, 180 GSM",
+                    sizes: "XS, S, M, L, XL, XXL, XXXL",
+                    features: "Breathable, Pre-shrunk, Double-stitched seams, Ribbed collar",
+                    leadtime: "2-3 weeks",
+                    moq: "500 units per color/size combination"
+                },
+                colors: ["White", "Black", "Navy", "Red", "Grey", "Green"]
+            },
+            product2: {
+                title: "Formal Shirts",
+                description: "Our formal shirts collection features premium quality fabrics with wrinkle-resistant properties. Each shirt is tailored to provide both comfort and professional appearance. Suitable for corporate uniforms and business attire, these shirts can be customized with embroidered logos or special details to match your brand requirements.",
+                image: "public/images/formal.jpg",
+                specs: {
+                    material: "60% Cotton, 40% Polyester, 120 GSM",
+                    sizes: "S, M, L, XL, XXL (Regular and Slim Fit)",
+                    features: "Wrinkle-resistant, Stain-resistant, Double-stitched buttons, French seams",
+                    leadtime: "3-4 weeks",
+                    moq: "300 units per style"
+                },
+                colors: ["White", "Light Blue", "Blue", "Pink", "Black"]
+            },
+            product3: {
+                title: "Denim Collection",
+                description: "Our sustainable denim collection combines durability with eco-friendly production methods. We use low-impact dyes and water-saving technology to create premium denim garments with various washes and styles. Each piece is constructed with reinforced stitching and quality hardware for long-lasting performance.",
+                image: "public/images/denim.jpg",
+                specs: {
+                    material: "98% Sustainable Cotton, 2% Elastane, 10-14 oz",
+                    sizes: "28-42 Waist (Regular, Slim, and Relaxed Fit)",
+                    features: "Low-impact dyes, Reduced water usage, Reinforced stress points, YKK zippers",
+                    leadtime: "5-6 weeks",
+                    moq: "500 units per style"
+                },
+                colors: ["Indigo", "Light Wash", "Medium Wash", "Dark Wash", "Black"]
+            },
+            product4: {
+                title: "Athletic Wear",
+                description: "Our athletic wear is engineered for performance with moisture-wicking fabrics and ergonomic designs. These garments help regulate body temperature during physical activities while providing maximum freedom of movement. The collection includes tops, bottoms, and outerwear suitable for various sports and active lifestyles.",
+                image: "public/images/athletic.jpg",
+                specs: {
+                    material: "88% Polyester, 12% Elastane, 170 GSM",
+                    sizes: "XS, S, M, L, XL, XXL",
+                    features: "Moisture-wicking, Quick-dry, 4-way stretch, Flatlock seams, UV protection UPF 30+",
+                    leadtime: "3-4 weeks",
+                    moq: "400 units per style"
+                },
+                colors: ["Black", "Navy", "Red", "Grey", "Blue"]
+            },
+            product5: {
+                title: "Winter Collection",
+                description: "Our winter collection provides exceptional thermal insulation with water-resistant outer layers. Each garment is designed to provide warmth without compromising on style or movement. The collection includes jackets, sweaters, and thermal base layers suitable for cold weather conditions.",
+                image: "public/images/winter.jpg",
+                specs: {
+                    material: "Outer: 100% Nylon; Inner: Recycled Polyester Insulation",
+                    sizes: "S, M, L, XL, XXL",
+                    features: "Water-resistant, Windproof, Thermal insulation, YKK zippers, Adjustable features",
+                    leadtime: "6-8 weeks",
+                    moq: "300 units per style"
+                },
+                colors: ["Black", "Navy", "Dark Green", "Burgundy", "Grey"]
+            },
+            product6: {
+                title: "Summer Essentials",
+                description: "Our summer essentials collection features lightweight fabrics with UV protection and quick-dry technology. These garments are perfect for hot weather and outdoor activities, providing comfort and sun protection while maintaining a stylish appearance. The collection includes shorts, t-shirts, and light outerwear.",
+                image: "public/images/summer.jpg",
+                specs: {
+                    material: "100% Lightweight Polyester, 110 GSM",
+                    sizes: "XS, S, M, L, XL, XXL",
+                    features: "UV protection UPF 50+, Quick-dry, Breathable, Moisture-wicking",
+                    leadtime: "2-3 weeks",
+                    moq: "400 units per style"
+                },
+                colors: ["White", "Light Blue", "Yellow", "Light Green", "Pink"]
+            },
+            product7: {
+                title: "Premium Polo Shirts",
+                description: "Our premium polo shirts feature classic designs with modern fits and durable piqué fabrics. Each polo is crafted with attention to detail, including reinforced plackets and cuffs for longevity. These versatile shirts are suitable for both casual and semi-formal settings and can be customized with embroidery for branding purposes.",
+                image: "public/images/polo.jpg",
+                specs: {
+                    material: "95% Cotton, 5% Elastane Piqué, 220 GSM",
+                    sizes: "XS, S, M, L, XL, XXL",
+                    features: "3-button placket, Reinforced seams, Ribbed cuffs, Side slits",
+                    leadtime: "3-4 weeks",
+                    moq: "500 units per color"
+                },
+                colors: ["White", "Black", "Navy", "Red", "Green", "Blue", "Grey"]
+            },
+            product8: {
+                title: "Industrial Workwear",
+                description: "Our industrial workwear is designed for demanding work environments with heavy-duty construction and reinforced seams. Each garment meets safety standards with high-visibility features and functional pockets. The collection includes coveralls, cargo pants, and safety jackets suitable for construction, manufacturing, and other industrial settings.",
+                image: "public/images/workwear.jpg",
+                specs: {
+                    material: "65% Polyester, 35% Cotton Twill, 280 GSM",
+                    sizes: "S, M, L, XL, XXL, XXXL",
+                    features: "Reinforced stress points, Triple stitching, Multiple tool pockets, High-visibility elements",
+                    leadtime: "4-5 weeks",
+                    moq: "300 units per style"
+                },
+                colors: ["Navy", "Grey", "Khaki", "High-Vis Yellow", "Orange"]
+            },
+            product9: {
+                title: "Organic Cotton Collection",
+                description: "Our organic cotton collection is GOTS certified and produced with eco-friendly dyes and sustainable methods. These garments are gentle on the skin and the environment, with a focus on minimal environmental impact throughout the production process. The collection includes t-shirts, hoodies, and loungewear for eco-conscious consumers.",
+                image: "public/images/organic.jpg",
+                specs: {
+                    material: "100% GOTS Certified Organic Cotton, 200 GSM",
+                    sizes: "XS, S, M, L, XL, XXL",
+                    features: "Eco-friendly dyes, Chemical-free processing, Biodegradable packaging",
+                    leadtime: "4-5 weeks",
+                    moq: "500 units per style"
+                },
+                colors: ["Natural", "Unbleached White", "Earth Brown", "Sage Green", "Sky Blue"]
+            }
+        };
+        
+        // Modal functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('product-modal');
+            const modalClose = document.querySelector('.modal-close');
+            const quickViewButtons = document.querySelectorAll('.quick-view-btn');
+            
+            // Open modal when clicking "Quick View"
+            quickViewButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const productId = this.getAttribute('data-product');
+                    const product = productData[productId];
+                    
+                    // Populate modal with product data
+                    document.querySelector('.modal-product-title').textContent = product.title;
+                    document.querySelector('.modal-product-desc').textContent = product.description;
+                    document.getElementById('modal-image').src = product.image;
+                    document.getElementById('modal-image').alt = product.title;
+                    
+                    // Update specifications
+                    document.getElementById('spec-material').textContent = product.specs.material;
+                    document.getElementById('spec-sizes').textContent = product.specs.sizes;
+                    document.getElementById('spec-features').textContent = product.specs.features;
+                    document.getElementById('spec-leadtime').textContent = product.specs.leadtime;
+                    document.getElementById('spec-moq').textContent = product.specs.moq;
+                    
+                    // Show the modal
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                });
+            });
+            
+            // Close modal when clicking X button
+            modalClose.addEventListener('click', function() {
+                modal.classList.remove('active');
+                document.body.style.overflow = ''; // Re-enable scrolling
+            });
+            
+            // Close modal when clicking outside
+            modal.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = ''; // Re-enable scrolling
+                }
+            });
+            
+            // Filter functionality
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const productCards = document.querySelectorAll('.product-card');
+            const colorOptions = document.querySelectorAll('.color-option');
+            const productSearch = document.getElementById('product-search');
+            const sortSelect = document.getElementById('sort-products');
+            
+            // Filter by category
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    filterProducts();
+                });
+            });
+            
+            // Filter by color
+            colorOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    filterProducts();
+                });
+            });
+            
+            // Search functionality
+            productSearch.addEventListener('input', function() {
+                filterProducts();
+            });
+            
+            // Sort functionality
+            sortSelect.addEventListener('change', function() {
+                filterProducts();
+            });
+            
+            // Combined filtering function
+            function filterProducts() {
+                // Get active filters
+                const activeCategory = document.querySelector('.filter-btn.active').getAttribute('data-category');
+                const activeColors = Array.from(document.querySelectorAll('.color-option.active')).map(color => color.getAttribute('data-color'));
+                const searchTerm = productSearch.value.toLowerCase();
+                const sortBy = sortSelect.value;
+                
+                // Hide all products first
+                productCards.forEach(card => {
+                    card.style.display = 'none';
+                });
+                
+                // Get visible products after filtering
+                const visibleProducts = Array.from(productCards).filter(card => {
+                    // Category filter
+                    if (activeCategory !== 'all' && !card.getAttribute('data-category').includes(activeCategory)) {
+                        return false;
+                    }
+                    
+                    // Color filter
+                    if (activeColors.length > 0) {
+                        const cardColors = card.getAttribute('data-colors').split(',');
+                        const hasMatchingColor = activeColors.some(color => cardColors.includes(color));
+                        if (!hasMatchingColor) return false;
+                    }
+                    
+                    // Search filter
+                    if (searchTerm) {
+                        const cardTitle = card.querySelector('h3').textContent.toLowerCase();
+                        const cardDesc = card.querySelector('p').textContent.toLowerCase();
+                        if (!cardTitle.includes(searchTerm) && !cardDesc.includes(searchTerm)) {
+                            return false;
+                        }
+                    }
+                    
+                    return true;
+                });
+                
+                // Sort products
+                if (sortBy === 'newest') {
+                    // Sort by newest (example implementation - could be based on a date attribute)
+                    visibleProducts.sort((a, b) => {
+                        return b.getAttribute('data-category').localeCompare(a.getAttribute('data-category'));
+                    });
+                } else if (sortBy === 'popular') {
+                    // Sort by popularity rating
+                    visibleProducts.sort((a, b) => {
+                        return a.getAttribute('data-popular') - b.getAttribute('data-popular');
+                    });
+                }
+                
+                // Show filtered and sorted products
+                visibleProducts.forEach(card => {
+                    card.style.display = 'flex';
+                });
+                
+                // Show "No results" message if needed
+                const productGrid = document.getElementById('product-grid');
+                if (visibleProducts.length === 0) {
+                    // Check if "no results" message already exists
+                    let noResults = document.getElementById('no-results-message');
+                    if (!noResults) {
+                        noResults = document.createElement('div');
+                        noResults.id = 'no-results-message';
+                        noResults.style.textAlign = 'center';
+                        noResults.style.width = '100%';
+                        noResults.style.padding = '50px 20px';
+                        noResults.innerHTML = '<h3>No products found</h3><p>Try adjusting your filters or search term.</p>';
+                        productGrid.appendChild(noResults);
+                    }
+                } else {
+                    // Remove "no results" message if it exists
+                    const noResults = document.getElementById('no-results-message');
+                    if (noResults) noResults.remove();
+                }
+            }
+            
+            // Color options in modal
+            const modalColorOptions = document.querySelectorAll('.modal-body .color-option');
+            modalColorOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    modalColorOptions.forEach(opt => opt.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // Initial filtering to show all products
+            filterProducts();
+        });
+    </script>
+</body>
+</html> 

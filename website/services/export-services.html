@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Export Services - Fission Textiles</title>
+    <meta name="description" content="Fission Textiles offers comprehensive export services to help clients navigate international trade regulations, logistics, and shipping for textile products worldwide.">
+    <meta property="og:title" content="Export Services - Fission Textiles">
+    <meta property="og:description" content="Discover our comprehensive export services to help you navigate international trade regulations, logistics, and shipping for textile products worldwide.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../public/images/og-image.jpg">
+    <meta property="og:url" content="https://fissiontextiles.com/services/export-services.html">
+    <link rel="icon" href="../public/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/fontawesome.min.css">
+    <!-- Fallback CDN for FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .service-content {
+            padding: 120px 0;
+        }
+        
+        .service-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        p {
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+        
+        .service-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .feature-card {
+            background-color: #f8f8f8;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .feature-card p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .destinations {
+            margin: 80px 0 50px;
+        }
+        
+        .map-container {
+            height: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .export-regions {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .region-card {
+            background-color: #f8f8f8;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .region-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .region-card h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 35px;
+            font-size: 1.4rem;
+        }
+        
+        .region-card h3 i {
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #000000;
+        }
+        
+        .region-card ul {
+            padding-left: 20px;
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        .region-card ul li {
+            margin-bottom: 8px;
+        }
+        
+        .services-container {
+            margin: 60px 0;
+        }
+        
+        .service-card {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+            background-color: #f8f8f8;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        @media (min-width: 768px) {
+            .service-card {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .service-card:last-child {
+            margin-bottom: 0;
+        }
+        
+        .service-image {
+            height: 100%;
+            min-height: 300px;
+            overflow: hidden;
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .service-card:hover .service-image img {
+            transform: scale(1.05);
+        }
+        
+        .service-details {
+            padding: 30px;
+        }
+        
+        .service-details h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.6rem;
+        }
+        
+        .service-details p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .service-details ul {
+            padding-left: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .service-details ul li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        
+        .cta-section {
+            background-color: #f1f1f1;
+            padding: 60px 0;
+            text-align: center;
+            border-radius: 10px;
+            margin: 60px 0 30px;
+        }
+        
+        .cta-section h3 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .cta-section p {
+            max-width: 700px;
+            margin: 0 auto 25px;
+        }
+        
+        footer {
+            padding: 60px 0 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <!-- Header -->
+    <header>
+        <a href="../index.html" class="logo">Fission Textiles</a>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../our-story.html">Our Story</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../catalog.html">Catalog</a></li>
+                <li><a href="../index.html#certifications">Certifications</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+                <li><a href="../index.html#quotes">Get Quote</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Service Content -->
+    <section class="service-content">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Export Services</h2>
+            </div>
+            
+            <p>At Fission Textiles, we understand that navigating the complexities of international trade can be challenging. Our comprehensive export services are designed to simplify the process, offering end-to-end solutions that handle everything from documentation and compliance to logistics and shipping.</p>
+            
+            <p>With extensive experience in global textile exports and established relationships with shipping partners and customs authorities, we ensure your products reach their destination efficiently, on time, and in compliance with all relevant regulations.</p>
+            
+            <!-- Services Container -->
+            <div class="services-container">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="../public/images/export-documentation.jpg" alt="Export Documentation Services">
+                    </div>
+                    <div class="service-details">
+                        <h3>Export Documentation</h3>
+                        <p>We handle all required documentation to ensure smooth customs clearance and regulatory compliance for your textile exports to markets worldwide.</p>
+                        <ul>
+                            <li>Commercial Invoice Preparation</li>
+                            <li>Certificate of Origin Documentation</li>
+                            <li>Packing Lists and Shipping Manifests</li>
+                            <li>Inspection Certificates and Quality Documentation</li>
+                            <li>Export Licenses and Permits</li>
+                            <li>Electronic Documentation Systems</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-details">
+                        <h3>Logistics & Shipping</h3>
+                        <p>Our logistics experts coordinate all aspects of international shipping, selecting the most efficient routes and carriers to meet your timeline and budget requirements.</p>
+                        <ul>
+                            <li>Air Freight Solutions</li>
+                            <li>Sea Freight Coordination</li>
+                            <li>Multimodal Transport Planning</li>
+                            <li>Container Loading and Optimization</li>
+                            <li>Tracking and Real-time Updates</li>
+                            <li>Last-mile Delivery Coordination</li>
+                        </ul>
+                    </div>
+                    <div class="service-image">
+                        <img src="../public/images/logistics.jpg" alt="Logistics and Shipping Services">
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="../public/images/compliance.jpg" alt="Compliance Management">
+                    </div>
+                    <div class="service-details">
+                        <h3>Compliance Management</h3>
+                        <p>We ensure your textile exports meet all legal requirements and industry standards in destination countries, minimizing delays and preventing compliance issues.</p>
+                        <ul>
+                            <li>International Trade Regulations Compliance</li>
+                            <li>Product Safety and Labeling Requirements</li>
+                            <li>Textile-specific Regulations Compliance</li>
+                            <li>Import Quota Management</li>
+                            <li>Customs Valuation Assistance</li>
+                            <li>Rules of Origin Compliance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Global Destinations -->
+            <div class="destinations">
+                <div class="section-title">
+                    <h2>Our Global Export Destinations</h2>
+                </div>
+                
+                <p>Fission Textiles has established reliable export channels to markets across the globe. Our extensive network and expertise enable us to efficiently deliver textile products to clients in major markets worldwide, navigating regional regulations and optimizing shipping routes.</p>
+                
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115681.29592731265!2d-77.47713270775661!3d25.0326996781907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25b331ebe06ef%3A0x9eb2c5e6d139ec62!2zU8O8cmTDvHJhc8SxIEJpcm7Jpn0!5e0!3m2!1str!2str!4v1580887968049!5m2!1str!2str" allowfullscreen=""></iframe>
+                </div>
+                
+                <div class="export-regions">
+                    <div class="region-card">
+                        <h3><i class="fas fa-globe-americas"></i> North America</h3>
+                        <ul>
+                            <li>United States</li>
+                            <li>Canada</li>
+                            <li>Mexico</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="region-card">
+                        <h3><i class="fas fa-globe-europe"></i> Europe</h3>
+                        <ul>
+                            <li>United Kingdom</li>
+                            <li>Germany</li>
+                            <li>France</li>
+                            <li>Italy</li>
+                            <li>Spain</li>
+                            <li>Netherlands</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="region-card">
+                        <h3><i class="fas fa-globe-asia"></i> Asia</h3>
+                        <ul>
+                            <li>Japan</li>
+                            <li>South Korea</li>
+                            <li>Singapore</li>
+                            <li>United Arab Emirates</li>
+                            <li>Saudi Arabia</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="region-card">
+                        <h3><i class="fas fa-globe-africa"></i> Australia & Oceania</h3>
+                        <ul>
+                            <li>Australia</li>
+                            <li>New Zealand</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <h3>Ready to Export Your Textile Products?</h3>
+                <p>Let our expert team handle the complexities of international trade while you focus on your core business. Contact us today to discuss your export needs and receive a customized solution.</p>
+                <a href="../index.html#quotes" class="btn btn-large">Request Export Services Quote</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Fission Textiles</h3>
+                    <p>Your premier partner for high-quality textile manufacturing and exports. We blend innovation with tradition to create exceptional garments that meet global standards.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html#home">Home</a></li>
+                        <li><a href="../our-story.html">Our Story</a></li>
+                        <li><a href="../services.html">Services</a></li>
+                        <li><a href="../catalog.html">Catalog</a></li>
+                        <li><a href="../index.html#certifications">Certifications</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="custom-manufacturing.html">Custom Manufacturing</a></li>
+                        <li><a href="bulk-production.html">Bulk Production</a></li>
+                        <li><a href="design-consultation.html">Design Consultation</a></li>
+                        <li><a href="quality-testing.html">Quality Testing</a></li>
+                        <li><a href="export-services.html">Export Services</a></li>
+                        <li><a href="sustainable-production.html">Sustainable Production</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p>Ayube colony st1, Fasilabad, Pakistan</p>
+                    <p>Email: info@fissiontextiles.com</p>
+                    <p>Phone: +91 9876543210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fission Textiles. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../public/js/main.js"></script>
+</body>
+</html> 

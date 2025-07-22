@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - NorthStar Impex</title>
+    <meta name="description" content="Explore NorthStar Impex's comprehensive garment manufacturing and export services. Custom manufacturing, bulk production, design consultation, quality testing, and sustainable production solutions. 2,000 pieces per day capacity.">
+    <meta property="og:title" content="Garment Manufacturing Services - NorthStar Impex">
+    <meta property="og:description" content="Explore our premium textile services including custom manufacturing, bulk production, and advanced quality testing.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="public/images/og-image.jpg">
+    <meta property="og:url" content="https://northstarindustries.com/services.html">
+    <link rel="icon" href="public/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/fontawesome.min.css">
+    <!-- Fallback CDN for FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Spacing and layout improvements */
+        section {
+            padding: 80px 0;
+            margin: 0;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .service-content {
+            padding: 120px 0 80px; /* Increased top padding to compensate for removed banner */
+        }
+        
+        .section-title {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        
+        .intro-text {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            text-align: center;
+            line-height: 1.8;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 40px;
+            padding: 40px 0;
+        }
+        
+        .service-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-img {
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .service-card:hover .service-img img {
+            transform: scale(1.05);
+        }
+        
+        .service-info {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-info h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+        
+        .service-info p {
+            margin-bottom: 25px;
+            color: #555;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+        
+        .service-cta {
+            text-align: right;
+            margin-top: auto;
+        }
+        
+        .cta-section {
+            background-color: #f8f8f8;
+            text-align: center;
+            padding: 60px 0;
+        }
+        
+        .cta-section h2 {
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn-large {
+            padding: 15px 40px;
+            font-size: 1.1rem;
+        }
+        
+        footer {
+            padding: 60px 0 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">NorthStar Impex</a>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="our-story.html">Our Story</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="catalog.html">Catalog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index.html#quotes">Get Quote</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Services Overview -->
+    <section class="service-content">
+        <div class="container">
+            <div class="section-title">
+                <h2>Premium Textile Services</h2>
+            </div>
+            
+            <p class="intro-text">At NorthStar Impex, we offer comprehensive garment manufacturing and export services designed to meet the diverse needs of global brands, retailers, and businesses. With our production capacity of 2,000 premium garments per day, we ensure exceptional quality and timely delivery at every stage of the production process, from initial design consultation to final export logistics.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="public/images/custom-manufacturing.jpg" alt="Custom Manufacturing">
+                    </div>
+                    <div class="service-info">
+                        <h3>Custom Manufacturing</h3>
+                        <p>Transform your unique clothing designs into high-quality garments with our end-to-end custom manufacturing solutions, tailored to your exact specifications.</p>
+                        <div class="service-cta">
+                            <a href="services/custom-manufacturing.html" class="btn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="public/images/bulk-production.jpg" alt="Bulk Production">
+                    </div>
+                    <div class="service-info">
+                        <h3>Bulk Production</h3>
+                        <p>Leverage our efficient bulk production capabilities for large-scale orders without compromising on quality, with competitive pricing and timely delivery.</p>
+                        <div class="service-cta">
+                            <a href="services/bulk-production.html" class="btn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="public/images/design-consultation.jpg" alt="Design Consultation">
+                    </div>
+                    <div class="service-info">
+                        <h3>Design Consultation</h3>
+                        <p>Benefit from our expertise in textile design with professional consultation services that help you create market-ready, trendy, and innovative garment collections.</p>
+                        <div class="service-cta">
+                            <a href="services/design-consultation.html" class="btn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="public/images/quality-testing.jpg" alt="Quality Testing">
+                    </div>
+                    <div class="service-info">
+                        <h3>Quality Testing</h3>
+                        <p>Ensure your products meet international standards with our comprehensive quality testing services, covering fabric quality, color fastness, dimensional stability, and more.</p>
+                        <div class="service-cta">
+                            <a href="services/quality-testing.html" class="btn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="public/images/export-services.jpg" alt="Export Services">
+                    </div>
+                    <div class="service-info">
+                        <h3>Export Services</h3>
+                        <p>Navigate international trade complexities with our expert export services, including documentation, compliance management, logistics coordination, and customs clearance.</p>
+                        <div class="service-cta">
+                            <a href="services/export-services.html" class="btn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="public/images/sustainable-production.jpg" alt="Sustainable Production">
+                    </div>
+                    <div class="service-info">
+                        <h3>Sustainable Production</h3>
+                        <p>Choose eco-friendly manufacturing with our sustainable production processes that minimize environmental impact while maintaining the highest quality standards.</p>
+                        <div class="service-cta">
+                            <a href="services/sustainable-production.html" class="btn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Start Your Next Textile Project?</h2>
+            <p>Contact our team today to discuss your specific requirements and receive a customized quote.</p>
+            <a href="index.html#quotes" class="btn btn-large">Get a Quote</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>NorthStar Impex</h3>
+                    <p>Your emerging partner for high-quality textile manufacturing and exports. Established in 2025 with a production capacity of 2,000 pieces per day, we blend innovation with tradition to create exceptional garments that meet global standards.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="our-story.html">Our Story</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="catalog.html">Catalog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services/custom-manufacturing.html">Custom Manufacturing</a></li>
+                        <li><a href="services/bulk-production.html">Bulk Production</a></li>
+                        <li><a href="services/design-consultation.html">Design Consultation</a></li>
+                        <li><a href="services/quality-testing.html">Quality Testing</a></li>
+                        <li><a href="services/export-services.html">Export Services</a></li>
+                        <li><a href="services/sustainable-production.html">Sustainable Production</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p>Ayube colony st1, Fasilabad, Pakistan</p>
+                    <p>Email: info@northstarindustries.com</p>
+                    <p>Phone: +91 9876543210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NorthStar Impex. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="public/js/main.js"></script>
+</body>
+</html> 

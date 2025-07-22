@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story - NorthStar Impex</title>
+    <meta name="description" content="Discover NorthStar Impex's journey from 2025 startup to leading garment manufacturer. Learn about our values, production capacity of 2,000 pieces per day, and commitment to sustainable textile manufacturing in Pakistan.">
+    <meta property="og:title" content="Our Story - NorthStar Impex Garment Manufacturing">
+    <meta property="og:description" content="Learn about NorthStar Impex's journey, values, and commitment to sustainable garment manufacturing. 2,000 pieces per day production capacity with international quality standards.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="public/images/og-image.jpg">
+    <meta property="og:url" content="https://northstarindustries.com/our-story.html">
+    <link rel="icon" href="public/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/fontawesome.min.css">
+    <!-- Fallback CDN for FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="robots" content="noindex">
+    <style>
+        /* Spacing and layout improvements */
+        section {
+            padding: 80px 0;
+            margin: 0;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .story-banner {
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('public/images/factory.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .story-content {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        p {
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 70px auto;
+            padding: 40px 0;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #000;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-item {
+            padding: 15px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-color: white;
+            border: 4px solid #000;
+            border-radius: 50%;
+            top: 18px;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(odd)::after {
+            right: -17px;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -17px;
+        }
+        
+        .timeline-content {
+            padding: 25px 30px;
+            background-color: #f8f8f8;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .timeline-content h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-content p {
+            margin-bottom: 0;
+        }
+        
+        .year {
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .values-section {
+            margin: 100px 0;
+            text-align: center;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .value-card {
+            background-color: #f8f8f8;
+            padding: 35px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .value-icon {
+            font-size: 2.5rem;
+            color: #000;
+            margin-bottom: 25px;
+        }
+        
+        .value-card h3 {
+            margin-bottom: 15px;
+        }
+        
+        .value-card p {
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+        
+        .team-section {
+            margin: 100px 0 60px;
+        }
+        
+        .team-section .section-title {
+            margin-bottom: 20px;
+        }
+        
+        .team-section > p {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .team-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .team-photo {
+            height: 280px;
+            overflow: hidden;
+        }
+        
+        .team-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .team-card:hover .team-photo img {
+            transform: scale(1.05);
+        }
+        
+        .team-info {
+            padding: 25px 20px;
+        }
+        
+        .team-info h3 {
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-size: 1.5rem;
+        }
+        
+        .team-role {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .team-info p {
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+        
+        footer {
+            padding: 60px 0 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            text-align: center;
+        }
+        
+        @media screen and (max-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item:nth-child(odd)::after,
+            .timeline-item:nth-child(even)::after {
+                left: 15px;
+            }
+            
+            .values-grid,
+            .team-grid {
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">NorthStar Impex</a>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="our-story.html">Our Story</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="catalog.html">Catalog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index.html#quotes">Get Quote</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Story Content -->
+    <section class="story-content">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Journey</h2>
+            </div>
+            
+            <p>NorthStar Impex was established in 2025 with a clear vision: to become a leading force in sustainable garment manufacturing and international trade. While we are a newly registered company, our founding team brings together decades of combined expertise in textile manufacturing, quality control, and global export operations.</p>
+            
+            <p>Our journey began with a mission to deliver exceptional quality garments while maintaining the highest standards of ethical manufacturing and environmental responsibility. In a remarkably short time, we have successfully completed our first international shipment and established a robust production facility with a capacity of 2,000 premium garments per day, demonstrating our commitment to growth, innovation, and customer satisfaction.</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="year">2025</div>
+                        <h3>Company Registration</h3>
+                        <p>NorthStar Impex was officially registered as a textile manufacturing and export company, marking the beginning of our journey in the industry.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="year">2025</div>
+                        <h3>First Shipment</h3>
+                        <p>Successfully completed our first shipment, demonstrating our capability to deliver quality products and meet international standards.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="year">2025</div>
+                        <h3>Production Capacity</h3>
+                        <p>Established a robust production facility with the capacity to manufacture 2,000 pieces per day, showcasing our commitment to scale and efficiency.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="year">2025</div>
+                        <h3>Quality Standards</h3>
+                        <p>Implemented comprehensive quality control measures and sustainable manufacturing practices to ensure excellence in every product.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="year">2025</div>
+                        <h3>Future Vision</h3>
+                        <p>Setting ambitious goals for expansion, technological advancement, and establishing NorthStar Impex as a trusted name in global textile exports.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="values-section">
+                <div class="section-title">
+                    <h2>Our Core Values</h2>
+                </div>
+                
+                <p>At NorthStar Impex, our core values form the foundation of everything we do, guiding our business decisions, client relationships, and our commitment to sustainable garment manufacturing practices.</p>
+                
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3>Excellence</h3>
+                        <p>We strive for excellence in every aspect of our business, from design and production to customer service and delivery.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Sustainability</h3>
+                        <p>We are committed to environmentally responsible practices throughout our supply chain and manufacturing processes.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Innovation</h3>
+                        <p>We continuously seek innovative solutions and technologies to improve our products, processes, and services.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Integrity</h3>
+                        <p>We conduct business with honesty, transparency, and accountability, building trust with our clients, partners, and employees.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Community</h3>
+                        <p>We value our role in the community and are committed to fair labor practices, employee welfare, and social responsibility.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Global Perspective</h3>
+                        <p>We embrace cultural diversity and maintain a global outlook, understanding and adapting to various market needs and trends.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="team-section">
+                <div class="section-title">
+                    <h2>Leadership Team</h2>
+                </div>
+                
+                <p>Our success is driven by a passionate leadership team with extensive industry experience and a shared vision for excellence.</p>
+                
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <img src="public/images/ceo.jpg" alt="CEO">
+                        </div>
+                        <div class="team-info">
+                            <h3>Rizwan Anwar</h3>
+                            <div class="team-role">Founder & CEO</div>
+                            <p>With extensive experience in the textile industry, Rizwan is the visionary leader behind NorthStar Impex's establishment and strategic direction.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <img src="public/images/coo.jpg" alt="COO">
+                        </div>
+                        <div class="team-info">
+                            <h3>Abrar Zubair</h3>
+                            <div class="team-role">Chief Operations Officer</div>
+                            <p>Abrar oversees all operational aspects, ensuring efficient processes and the highest quality standards across our production facility with a capacity of 2,000 pieces per day.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <img src="public/images/tech-director.jpg" alt="Director Operations">
+                        </div>
+                        <div class="team-info">
+                            <h3>Aamash Jabran</h3>
+                            <div class="team-role">Director Operations</div>
+                            <p>Aamash is the Director of Operations at NorthStar Impex, responsible for overseeing all operational aspects of the Company and ensuring smooth production workflows.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>NorthStar Impex</h3>
+                    <p>Your premier partner for high-quality textile manufacturing and exports. We blend innovation with tradition to create exceptional garments that meet global standards.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="our-story.html">Our Story</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="catalog.html">Catalog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services/custom-manufacturing.html">Custom Manufacturing</a></li>
+                        <li><a href="services/bulk-production.html">Bulk Production</a></li>
+                        <li><a href="services/design-consultation.html">Design Consultation</a></li>
+                        <li><a href="services/quality-testing.html">Quality Testing</a></li>
+                        <li><a href="services/export-services.html">Export Services</a></li>
+                        <li><a href="services/sustainable-production.html">Sustainable Production</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p>Ayube colony st1, Fasilabad, Pakistan</p>
+                    <p>Email: info@northstarindustries.com</p>
+                    <p>Phone: +91 9876543210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NorthStar Impex. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="public/js/main.js"></script>
+</body>
+</html> 

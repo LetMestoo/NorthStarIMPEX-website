@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality Testing - Fission Textiles</title>
+    <meta name="description" content="Fission Textiles provides comprehensive quality testing services ensuring that all textile products meet rigorous international standards and client specifications.">
+    <meta property="og:title" content="Quality Testing - Fission Textiles">
+    <meta property="og:description" content="Discover our comprehensive quality testing services ensuring that all textile products meet rigorous international standards and client specifications.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../public/images/og-image.jpg">
+    <meta property="og:url" content="https://fissiontextiles.com/services/quality-testing.html">
+    <link rel="icon" href="../public/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/fontawesome.min.css">
+    <!-- Fallback CDN for FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .service-content {
+            padding: 120px 0;
+        }
+        
+        .service-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        p {
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+        
+        .test-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .test-card {
+            background-color: #f8f8f8;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        
+        .test-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .test-card-header {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .test-card-header h3 {
+            margin: 0;
+            font-size: 1.4rem;
+        }
+        
+        .test-card-body {
+            padding: 25px;
+        }
+        
+        .test-card-body ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .test-card-body li {
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .test-card-body li i {
+            color: #000;
+            margin-right: 10px;
+        }
+        
+        .testing-methods {
+            margin: 60px 0;
+        }
+        
+        .method-item {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .method-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .method-item h3 {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+        }
+        
+        .method-item h3 i {
+            margin-right: 15px;
+            color: #000;
+            font-size: 1.8rem;
+        }
+        
+        .method-item p {
+            margin-left: 33px;
+            margin-bottom: 15px;
+        }
+        
+        .standard-logos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin: 50px 0;
+            align-items: center;
+        }
+        
+        .standard-logo {
+            max-width: 120px;
+            height: auto;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease, transform 0.3s ease;
+        }
+        
+        .standard-logo:hover {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+        
+        .cta-section {
+            background-color: #f1f1f1;
+            padding: 60px 0;
+            text-align: center;
+            border-radius: 10px;
+            margin: 60px 0 30px;
+        }
+        
+        .cta-section h3 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .cta-section p {
+            max-width: 700px;
+            margin: 0 auto 25px;
+        }
+        
+        .lab-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 40px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        footer {
+            padding: 60px 0 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .test-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .standard-logos {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <!-- Header -->
+    <header>
+        <a href="../index.html" class="logo">Fission Textiles</a>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../our-story.html">Our Story</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../catalog.html">Catalog</a></li>
+                <li><a href="../index.html#certifications">Certifications</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+                <li><a href="../index.html#quotes">Get Quote</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Service Content -->
+    <section class="service-content">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Quality Testing Services</h2>
+            </div>
+            
+            <p>At Fission Textiles, we provide comprehensive quality testing services to ensure your textile products meet international standards, regulatory requirements, and customer expectations. Our state-of-the-art laboratory is equipped with advanced testing equipment and staffed by experienced technicians who conduct rigorous tests according to established protocols.</p>
+            
+            <p>Whether you need testing for raw materials, in-process verification, or final product validation, our quality testing services offer reliable, accurate results with detailed reports that help you make informed decisions and maintain consistent quality.</p>
+            
+            <img src="../public/images/lab.jpg" alt="Quality Testing Laboratory" class="lab-image">
+            
+            <!-- Testing Categories -->
+            <div class="test-cards">
+                <div class="test-card">
+                    <div class="test-card-header">
+                        <h3>Physical Testing</h3>
+                    </div>
+                    <div class="test-card-body">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Tensile Strength & Elongation</li>
+                            <li><i class="fas fa-check-circle"></i> Tear Resistance</li>
+                            <li><i class="fas fa-check-circle"></i> Abrasion Resistance</li>
+                            <li><i class="fas fa-check-circle"></i> Pilling Resistance</li>
+                            <li><i class="fas fa-check-circle"></i> Dimensional Stability</li>
+                            <li><i class="fas fa-check-circle"></i> Fabric Weight & Thickness</li>
+                            <li><i class="fas fa-check-circle"></i> Seam Strength</li>
+                            <li><i class="fas fa-check-circle"></i> Button Pull & Attachment Strength</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="test-card">
+                    <div class="test-card-header">
+                        <h3>Color & Appearance Testing</h3>
+                    </div>
+                    <div class="test-card-body">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Color Fastness to Washing</li>
+                            <li><i class="fas fa-check-circle"></i> Color Fastness to Light</li>
+                            <li><i class="fas fa-check-circle"></i> Color Fastness to Perspiration</li>
+                            <li><i class="fas fa-check-circle"></i> Color Fastness to Rubbing</li>
+                            <li><i class="fas fa-check-circle"></i> Color Matching & Shade Consistency</li>
+                            <li><i class="fas fa-check-circle"></i> Appearance After Washing</li>
+                            <li><i class="fas fa-check-circle"></i> Print Quality Assessment</li>
+                            <li><i class="fas fa-check-circle"></i> Pattern Alignment Verification</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="test-card">
+                    <div class="test-card-header">
+                        <h3>Chemical Testing</h3>
+                    </div>
+                    <div class="test-card-body">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> pH Value Determination</li>
+                            <li><i class="fas fa-check-circle"></i> Restricted Substances Testing</li>
+                            <li><i class="fas fa-check-circle"></i> Azo Dyes Detection</li>
+                            <li><i class="fas fa-check-circle"></i> Formaldehyde Content</li>
+                            <li><i class="fas fa-check-circle"></i> Heavy Metals Detection</li>
+                            <li><i class="fas fa-check-circle"></i> Phthalates Testing</li>
+                            <li><i class="fas fa-check-circle"></i> Allergens Identification</li>
+                            <li><i class="fas fa-check-circle"></i> REACH Compliance Testing</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="test-card">
+                    <div class="test-card-header">
+                        <h3>Performance Testing</h3>
+                    </div>
+                    <div class="test-card-body">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Water Repellency</li>
+                            <li><i class="fas fa-check-circle"></i> Moisture Wicking</li>
+                            <li><i class="fas fa-check-circle"></i> UV Protection Factor</li>
+                            <li><i class="fas fa-check-circle"></i> Breathability Assessment</li>
+                            <li><i class="fas fa-check-circle"></i> Thermal Insulation</li>
+                            <li><i class="fas fa-check-circle"></i> Stretch & Recovery</li>
+                            <li><i class="fas fa-check-circle"></i> Shrinkage Evaluation</li>
+                            <li><i class="fas fa-check-circle"></i> Wash Durability Testing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testing Methodology -->
+            <div class="testing-methods">
+                <div class="section-title">
+                    <h2>Our Testing Methodology</h2>
+                </div>
+                
+                <p>Our quality testing approach is comprehensive, systematic, and tailored to your specific requirements. We follow international standards and employ cutting-edge techniques to deliver accurate, reliable results.</p>
+                
+                <div class="method-item">
+                    <h3><i class="fas fa-flask"></i> Sample Selection & Preparation</h3>
+                    <p>We employ systematic sampling techniques to ensure that test samples accurately represent the entire production batch. Our technicians prepare samples according to standardized procedures to maintain consistency and reliability in testing.</p>
+                </div>
+                
+                <div class="method-item">
+                    <h3><i class="fas fa-cogs"></i> Testing Protocol Implementation</h3>
+                    <p>Each test is conducted according to established international standards and protocols such as ASTM, ISO, AATCC, and BS. We calibrate our equipment regularly to ensure precision and follow strict methodologies for consistent results.</p>
+                </div>
+                
+                <div class="method-item">
+                    <h3><i class="fas fa-chart-line"></i> Data Analysis & Reporting</h3>
+                    <p>Test data is analyzed by experienced professionals who interpret results in the context of international standards and your specific requirements. Our comprehensive reports include detailed findings, pass/fail assessments, and recommendations for improvement where applicable.</p>
+                </div>
+                
+                <div class="method-item">
+                    <h3><i class="fas fa-search"></i> Quality Verification</h3>
+                    <p>Our quality assurance team conducts secondary verification of all critical test results and regularly participates in inter-laboratory comparison programs to ensure the accuracy and reliability of our testing processes.</p>
+                </div>
+            </div>
+            
+            <!-- Standards & Certifications -->
+            <div class="standards-section">
+                <div class="section-title">
+                    <h2>Standards We Follow</h2>
+                </div>
+                
+                <p>Our testing procedures are aligned with internationally recognized standards, ensuring that your textile products meet global quality benchmarks and market-specific requirements.</p>
+                
+                <div class="standard-logos">
+                    <img src="../public/images/iso.png" alt="ISO Standards" class="standard-logo">
+                    <img src="../public/images/astm.png" alt="ASTM Standards" class="standard-logo">
+                    <img src="../public/images/aatcc.png" alt="AATCC Standards" class="standard-logo">
+                    <img src="../public/images/bs.png" alt="British Standards" class="standard-logo">
+                    <img src="../public/images/gots.png" alt="GOTS Standards" class="standard-logo">
+                    <img src="../public/images/oeko-tex.png" alt="OEKO-TEX Standards" class="standard-logo">
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <h3>Ready to Ensure the Quality of Your Products?</h3>
+                <p>Contact us today to discuss your quality testing needs and discover how our comprehensive testing services can help maintain your product excellence and regulatory compliance.</p>
+                <a href="../index.html#quotes" class="btn btn-large">Request Testing Services</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Fission Textiles</h3>
+                    <p>Your premier partner for high-quality textile manufacturing and exports. We blend innovation with tradition to create exceptional garments that meet global standards.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html#home">Home</a></li>
+                        <li><a href="../our-story.html">Our Story</a></li>
+                        <li><a href="../services.html">Services</a></li>
+                        <li><a href="../catalog.html">Catalog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="custom-manufacturing.html">Custom Manufacturing</a></li>
+                        <li><a href="bulk-production.html">Bulk Production</a></li>
+                        <li><a href="design-consultation.html">Design Consultation</a></li>
+                        <li><a href="quality-testing.html">Quality Testing</a></li>
+                        <li><a href="export-services.html">Export Services</a></li>
+                        <li><a href="sustainable-production.html">Sustainable Production</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p>Ayube colony st1, Fasilabad, Pakistan</p>
+                    <p>Email: info@fissiontextiles.com</p>
+                    <p>Phone: +91 9876543210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fission Textiles. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../public/js/main.js"></script>
+</body>
+</html> 

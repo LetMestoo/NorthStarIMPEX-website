@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NorthStar Impex - Premium Garment Exports</title>
+    <meta name="description" content="NorthStar Impex - Leading garment manufacturing and export company in Pakistan. Specializing in premium quality garments, sustainable production, and reliable export services. 2,000 pieces per day capacity. Get your custom quote today.">
+    <meta property="og:title" content="NorthStar Impex - Premium Garment Manufacturing & Export Services">
+    <meta property="og:description" content="NorthStar Impex delivers exceptional quality garments with sustainable practices and reliable export services. 2,000 pieces per day production capacity. Contact us for custom manufacturing solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="public/images/og-image.jpg">
+    <meta property="og:url" content="https://northstarindustries.com/">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="garment manufacturing, textile exports, custom clothing, bulk production, Pakistan textile, sustainable manufacturing, garment factory, clothing manufacturer, textile company, export services">
+    <meta name="author" content="NorthStar Impex">
+    <meta name="language" content="English">
+    <meta name="geo.region" content="PK">
+    <meta name="geo.placename" content="Faisalabad">
+    <link rel="canonical" href="https://northstarindustries.com/">
+    <link rel="icon" href="public/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/fontawesome.min.css">
+    <!-- Fallback CDN for FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Font for headings -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Spacing fixes */
+        section {
+            padding: 80px 0;
+            margin: 0;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero {
+            position: relative;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-color: #000; /* Fallback background */
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0; /* Changed from -1 to 0 */
+            display: block;
+            min-width: 100%;
+            min-height: 100%;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1; /* Changed from -1 to 1 */
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            text-align: center;
+            color: #fff;
+            z-index: 2; /* Higher z-index to ensure content is on top */
+            position: relative; /* Make sure z-index works */
+        }
+        
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .hero .btn {
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            min-width: 180px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero .btn-outline {
+            background-color: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+        }
+        
+        .hero .btn-outline:hover {
+            background-color: #fff;
+            color: #000;
+        }
+        
+        .section-title {
+            margin-bottom: 50px;
+        }
+        
+        .about-content, 
+        .production-content, 
+        .cert-grid,
+        .contact-content {
+            margin-top: 40px;
+        }
+        
+        .featured-products {
+            padding: 100px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .featured-slider {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 20px;
+        }
+        
+        .product-showcase {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .product-showcase:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .product-showcase img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-showcase:hover img {
+            transform: scale(1.05);
+        }
+        
+        .product-info {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        
+        .product-info h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .product-info p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+        
+        .catalog-cta {
+            text-align: center;
+            margin-top: 70px;
+            padding: 30px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        .catalog-cta h3 {
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+        
+        .catalog-cta p {
+            max-width: 700px;
+            margin: 0 auto 25px;
+        }
+        
+        footer {
+            padding: 60px 0 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            padding: 0 20px;
+        }
+        
+        .footer-bottom {
+            margin-top: 40px;
+            padding: 20px 0;
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+            
+            .hero {
+                padding: 100px 0;
+            }
+            
+            .section-title {
+                margin-bottom: 30px;
+            }
+        }
+        
+        /* Improved spacing for Contact Section */
+        .contact-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 60px;
+            margin-top: 50px;
+        }
+        
+        .contact-info {
+            background-color: #f8f8f8;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-info h3 {
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #000;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 1.2rem;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .info-text {
+            flex-grow: 1;
+        }
+        
+        .info-text h4 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+        
+        .info-text p {
+            margin: 0 0 5px;
+            color: #555;
+        }
+        
+        .contact-form {
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <span style="--i:1;" class="outline-text" data-text="N">N</span>
+                <span style="--i:2;" class="outline-text" data-text="O">O</span>
+                <span style="--i:3;" class="outline-text" data-text="R">R</span>
+                <span style="--i:4;" class="outline-text" data-text="T">T</span>
+                <span style="--i:5;" class="outline-text" data-text="H">H</span>
+                <span style="--i:6;" class="outline-text" data-text="S">S</span>
+                <span style="--i:7;" class="outline-text" data-text="T">T</span>
+                <span style="--i:8;" class="outline-text" data-text="A">A</span>
+                <span style="--i:9;" class="outline-text" data-text="R">R</span>
+                <span style="--i:10;" class="outline-text" data-text=" ">&nbsp;</span>
+                <span class="impex-break">
+                    <span style="--i:11;" class="outline-text" data-text="I">I</span>
+                    <span style="--i:12;" class="outline-text" data-text="M">M</span>
+                    <span style="--i:13;" class="outline-text" data-text="P">P</span>
+                    <span style="--i:14;" class="outline-text" data-text="E">E</span>
+                    <span style="--i:15;" class="outline-text" data-text="X">X</span>
+                </span>
+            </div>
+            <div class="loading-subtitle">
+                <span class="word" style="--word:1;">Welcome</span>
+                <span class="word" style="--word:2;">to</span>
+                <span class="word" style="--word:3;">Northstar</span>
+                <span class="word" style="--word:4;">Impex</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <video 
+            id="heroVideo" 
+            class="hero-video" 
+            autoplay 
+            loop 
+            muted 
+            playsinline 
+            preload="auto" 
+            poster="public/images/garment-production.jpg" 
+            width="100%" 
+            height="100%"
+        >
+            <source src="public/videos/Backgroundvideonew.mp4" type="video/mp4">
+            <!-- Fallback for older browsers -->
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Premium Garment Manufacturing & Export Solutions</h1>
+                <p>NorthStar Impex delivers exceptional quality garments with sustainable practices, innovative designs, and reliable export services. Our 2,000 pieces per day production capacity ensures timely delivery for your textile manufacturing needs.</p>
+                <div class="hero-buttons">
+                    <a href="services.html" class="btn">Explore Our Services</a>
+                    <a href="catalog.html" class="btn btn-outline">View Product Catalog</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">NorthStar Impex</a>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="our-story.html">Our Story</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="catalog.html">Catalog</a></li>
+                <li><a href="#production">Production</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#quotes">Get Quote</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Us</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="public/images/factory.jpg" alt="NorthStar Impex Factory">
+                </div>
+                <div class="about-text">
+                    <h3>Your Trusted Garment Manufacturing Partner</h3>
+                    <p>NorthStar Impex is a dynamic garment manufacturing and export company established in 2025, bringing together decades of combined industry expertise. Our founding team's extensive experience in textile manufacturing, quality control, and international trade positions us as a reliable partner for your garment production needs.</p>
+                    <p>With our state-of-the-art facility capable of producing 2,000 premium garments daily, we combine traditional craftsmanship with modern technology to deliver exceptional quality products. Our commitment to sustainable practices, ethical manufacturing, and customer satisfaction makes us the ideal choice for brands seeking reliable textile manufacturing solutions.</p>
+                    <a href="our-story.html" class="btn">Learn More About Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Products Section -->
+    <section class="featured-products" id="featured">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Products</h2>
+            </div>
+            <div class="featured-slider">
+                <div class="product-showcase">
+                    <img src="public/images/White-tshirt.png" alt="Premium Cotton T-shirts">
+                    <div class="product-info">
+                        <h3>Premium Cotton T-shirts</h3>
+                        <p>100% organic cotton, breathable fabric, multiple colors available.</p>
+                        <a href="catalog.html" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="product-showcase">
+                    <img src="public/images/denim.jpg" alt="Denim Collection">
+                    <div class="product-info">
+                        <h3>Denim Collection</h3>
+                        <p>Sustainable denim production, various washes and styles available.</p>
+                        <a href="catalog.html" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="product-showcase">
+                    <img src="public/images/athletic.jpg" alt="Athletic Wear">
+                    <div class="product-info">
+                        <h3>Athletic Wear</h3>
+                        <p>Moisture-wicking fabrics, ergonomic design, performance enhancing.</p>
+                        <a href="catalog.html" class="btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-cta">
+                <h3>Explore Our Complete Product Range</h3>
+                <p>Discover our comprehensive catalog featuring premium garments for retail, wholesale, and custom manufacturing. From basic essentials to specialized collections, we offer solutions for every market segment.</p>
+                <a href="catalog.html" class="btn btn-large">Browse Complete Product Catalog</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Production Section -->
+    <section class="production" id="production">
+        <div class="container">
+            <div class="section-title">
+                <h2>Production Process</h2>
+            </div>
+            <div class="production-content">
+                <div class="process-card">
+                    <div class="process-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <h3>Design & Development</h3>
+                    <p>Our experienced design team collaborates with clients to create innovative garment designs that align with current market trends and brand requirements. We utilize advanced CAD software and digital pattern-making technology to ensure precision and efficiency in design development.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Material Sourcing</h3>
+                    <p>We partner with certified suppliers to source premium quality fabrics and materials that meet international standards. All materials undergo comprehensive testing for quality, durability, colorfastness, and environmental compliance before production begins.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3>Cutting & Preparation</h3>
+                    <p>Our skilled cutting team utilizes advanced cutting technology and precision equipment to ensure optimal material utilization and minimal waste. Each fabric piece is carefully examined and cut according to exact specifications for consistent, high-quality production.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Manufacturing</h3>
+                    <p>Our experienced production team combines traditional garment-making expertise with modern manufacturing technology to create premium quality garments. With our 2,000 pieces per day capacity, we ensure efficient production while maintaining the highest quality standards throughout the manufacturing process.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Quality Control</h3>
+                    <p>Every garment undergoes rigorous quality inspection at multiple stages of production. Our dedicated quality control team ensures that each item meets international quality standards, including fabric quality, stitching precision, and finishing details before final packaging.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Shipping & Logistics</h3>
+                    <p>We manage complete export documentation, customs compliance, and international shipping logistics to ensure secure and timely delivery to your destination. Our logistics expertise ensures smooth customs clearance and cost-effective transportation solutions for your garment orders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Location</h4>
+                            <p>Ayube colony st1, Fasilabad, Pakistan</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Phone</h4>
+                            <p>+91 9876543210</p>
+                            <p>+1 234 567 8901</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Email</h4>
+                            <p>info@northstarindustries.com</p>
+                            <p>sales@northstarindustries.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Working Hours</h4>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                            <p>Saturday: 10:00 AM - 2:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Quotes Section -->
+    <section class="quotes" id="quotes">
+        <div class="container">
+            <div class="section-title">
+                <h2>Request a Quote</h2>
+            </div>
+            <div class="contact-form">
+                <form id="quoteForm">
+                    <div class="form-group">
+                        <input type="text" name="company" placeholder="Company Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="contact_person" placeholder="Contact Person" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="product_category" required>
+                            <option value="" disabled selected>Product Category</option>
+                            <option value="t_shirts">T-Shirts</option>
+                            <option value="formal">Formal Shirts</option>
+                            <option value="denim">Denim Collection</option>
+                            <option value="athletic">Athletic Wear</option>
+                            <option value="winter">Winter Collection</option>
+                            <option value="summer">Summer Essentials</option>
+                            <option value="custom">Custom Design</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="quantity" placeholder="Estimated Quantity" min="100" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="requirements" placeholder="Additional Requirements or Specifications" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="file" id="specFile" name="spec_file">
+                        <label for="specFile" style="display: block; margin-top: 5px; font-size: 0.9rem; color: #666;">Upload Specifications (Optional)</label>
+                    </div>
+                    <button type="submit" class="btn">Submit Quote Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>NorthStar Impex</h3>
+                    <p>Your trusted partner for premium garment manufacturing and export services in Pakistan. Established in 2025 with a production capacity of 2,000 pieces per day, we specialize in sustainable textile manufacturing, custom designs, and reliable international trade solutions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="our-story.html">Our Story</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="catalog.html">Catalog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services/custom-manufacturing.html">Custom Manufacturing</a></li>
+                        <li><a href="services/bulk-production.html">Bulk Production</a></li>
+                        <li><a href="services/design-consultation.html">Design Consultation</a></li>
+                        <li><a href="services/quality-testing.html">Quality Testing</a></li>
+                        <li><a href="services/export-services.html">Export Services</a></li>
+                        <li><a href="services/sustainable-production.html">Sustainable Production</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for the latest updates on products, trends, and industry news.</p>
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NorthStar Impex. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="public/js/main.js"></script>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "NorthStar Impex",
+        "description": "Premium garment manufacturing and export company in Pakistan with 2,000 pieces per day production capacity",
+        "url": "https://northstarindustries.com",
+        "logo": "https://northstarindustries.com/public/images/logo.png",
+        "foundingDate": "2025",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Ayube colony st1",
+            "addressLocality": "Faisalabad",
+            "addressCountry": "Pakistan"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-9876543210",
+            "email": "info@northstarindustries.com",
+            "contactType": "customer service"
+        },
+        "sameAs": [
+            "https://facebook.com/northstarimpex",
+            "https://linkedin.com/company/northstarimpex"
+        ]
+    }
+    </script>
+    
+    <script>
+        // Ensure video plays properly
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroVideo = document.getElementById('heroVideo');
+            
+            if (heroVideo) {
+                // Force preload the video
+                heroVideo.preload = 'auto';
+                heroVideo.load();
+                
+                // Try to play the video immediately
+                var playPromise = heroVideo.play();
+                
+                if (playPromise !== undefined) {
+                    playPromise.then(_ => {
+                        // Video is playing
+                        console.log("Video is playing");
+                    })
+                    .catch(error => {
+                        console.log("Video play error: ", error);
+                        // Fallback - show poster image if video won't play
+                        heroVideo.style.display = 'none';
+                        document.querySelector('.hero').style.backgroundImage = "url('public/images/garment-production.jpg')";
+                    });
+                }
+                
+                // Additional check to see if video is properly loaded
+                heroVideo.addEventListener('canplaythrough', function() {
+                    console.log("Video can play through");
+                });
+                
+                heroVideo.addEventListener('error', function(e) {
+                    console.log("Video error occurred", e);
+                    heroVideo.style.display = 'none';
+                    document.querySelector('.hero').style.backgroundImage = "url('public/images/garment-production.jpg')";
+                });
+            } else {
+                console.log("Hero video element not found");
+                document.querySelector('.hero').style.backgroundImage = "url('public/images/garment-production.jpg')";
+            }
+        });
+    </script>
+</body>
+</html> 
