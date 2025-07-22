@@ -1,0 +1,11 @@
+{
+  "rootDirectory": "website",
+  "builds": [
+    { "src": "website/package.json", "use": "@vercel/static-build" }
+  ],
+  "routes": [
+    { "src": "/public/(.*)", "dest": "/website/public/$1" },
+    { "src": "/services/(.*)", "dest": "/website/services/$1" },
+    { "src": "/(.*)", "dest": "/website/$1" }
+  ]
+} 
