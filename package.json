@@ -1,12 +1,9 @@
 {
-  "name": "fission-textiles-website",
+  "name": "northstar-impex-website",
   "version": "1.0.0",
-  "description": "Production-ready static website for Fission Textiles.",
-  "scripts": {
-    "start": "npx serve .",
-    "build": "echo 'No build step required for static site'"
-  },
-  "author": "Fission Textiles",
+  "description": "Production-ready static website for NorthStar Impex.",
+ 
+  "author": "NorthStar Impex",
   "license": "MIT",
   "dependencies": {
     "@vercel/speed-insights": "^1.2.0"
