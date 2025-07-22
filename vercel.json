@@ -1,5 +1,4 @@
 {
-  "rootDirectory": "website",
   "builds": [
     { "src": "website/package.json", "use": "@vercel/static-build" }
   ],
